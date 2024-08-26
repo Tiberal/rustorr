@@ -1,14 +1,12 @@
-use crate::bencode_parser::parser::Parser;
+use crate::torrent::torrent::Torrent;
 
 mod bencode_parser;
-
+mod torrent;
 
 fn main() {
-    println!("Hello, world!");
 
-    let template = "d3:cow3:moo4:spam4:eggse";
-    let parser = Parser::new(template.to_string());
-    let result = parser.parse();
+    //todo introduce own error here
+    let torrent = Torrent::new("sample.torrent").unwrap();
 
-    println!("result {:?}", result);
+    println!("torrent {:?}", torrent);
 }

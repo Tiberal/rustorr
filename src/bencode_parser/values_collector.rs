@@ -34,8 +34,6 @@ impl Collector for ArrayCollector {
     }
 }
 
-// d3:foo3:bar5:helloi52ee
-
 pub(crate) struct DictionaryCollector {
     map: IndexMap<String, Value>,
     current_key: Option<String>,
